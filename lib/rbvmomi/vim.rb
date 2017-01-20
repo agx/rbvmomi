@@ -37,7 +37,7 @@ class VIM < Connection
     opts[:path] ||= '/sdk'
     opts[:ns] ||= 'urn:vim25'
     rev_given = opts[:rev] != nil
-    opts[:rev] = '6.0' unless rev_given
+    opts[:rev] = '6.5' unless rev_given
     opts[:debug] = (!ENV['RBVMOMI_DEBUG'].empty? rescue false) unless opts.member? :debug
 
     new(opts).tap do |vim|
